@@ -8,8 +8,8 @@ export default function Home() {
 
   const elements = {
     'A': <pre>
-      AA ka lawda <br></br>
-      A ka lawda
+      create table patients (PID int primary key, PName varchar(20), DoB date check(DoB <= "2022-06-08"), Mobile varchar(10) unique, Email varchar(50) check(Email like "%@%"));<br></br>
+      create table test(PID int, TName varchar(20) check(TName in ("Blood Group", "Blood Pressure", "MRI")), Charges int check(Charges between 500 and 2000), TDate date, Results varchar(20), foreign key(PID) references patients(PID));<br></br>
     </pre>,
     'B': "B ka lawda"
   }
